@@ -1,0 +1,97 @@
+.slider-wrapper {
+  min-height: 100vh;
+  background: #0b0f1a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider {
+  display: flex;
+  width: 90%;
+  max-width: 1300px;
+  height: 420px;
+  gap: 12px;
+}
+
+.card {
+  flex: 0.8;
+  position: relative;
+  border-radius: 16px;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  overflow: hidden;
+  transition: flex 0.5s ease;
+}
+
+.card.active {
+  flex: 4;
+}
+
+/* Overlay */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.3),
+    rgba(0,0,0,0.7)
+  );
+}
+
+/* Collapsed vertical text */
+.collapsed-text {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.collapsed-text span {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* Expanded content */
+.content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #fff;
+}
+
+.content img {
+  width: 120px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.content h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.content p {
+  max-width: 300px;
+  opacity: 0.9;
+  margin-bottom: 20px;
+}
+
+.content button {
+  width: fit-content;
+  padding: 10px 20px;
+  background: #ff7a18;
+  border: none;
+  border-radius: 20px;
+  color: #fff;
+  cursor: pointer;
+}
